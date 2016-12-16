@@ -59,6 +59,7 @@ ACC_COMPILE_TIME_ASSERT_HEADER(CHAR_MAX == 255) // -funsigned-char
 ACC_COMPILE_TIME_ASSERT_HEADER((char)(-1) > 0) // -funsigned-char
 
 #if (ACC_CC_MSC)
+#  pragma warning(error: 4146)
 #  pragma warning(error: 4319)
 #endif
 

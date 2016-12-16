@@ -41,6 +41,10 @@
 #include "p_lx_exc.h"
 #include "p_lx_elf.h"
 #include "ui.h"
+#if (ACC_CC_MSC)
+#  pragma warning(disable: 4244) // -Wconversion
+#  pragma warning(disable: 4267) // -Wconversion
+#endif
 
 #define PT_LOAD32   Elf32_Phdr::PT_LOAD
 #define PT_LOAD64   Elf64_Phdr::PT_LOAD

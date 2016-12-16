@@ -27,6 +27,10 @@
 
 #include "conf.h"
 #include "linker.h"
+#if (ACC_CC_MSC)
+#  pragma warning(disable: 4244) // -Wconversion
+#  pragma warning(disable: 4267) // -Wconversion
+#endif
 
 static unsigned hex(unsigned char c) { return (c & 0xf) + (c > '9' ? 9 : 0); }
 

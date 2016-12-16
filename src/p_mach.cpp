@@ -33,6 +33,10 @@
 #include "packer.h"
 #include "p_mach.h"
 #include "ui.h"
+#if (ACC_CC_MSC)
+#  pragma warning(disable: 4244) // -Wconversion
+#  pragma warning(disable: 4267) // -Wconversion
+#endif
 
 static const
 #include "stub/i386-darwin.macho-entry.h"
